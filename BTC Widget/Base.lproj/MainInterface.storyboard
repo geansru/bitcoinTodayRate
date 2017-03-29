@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="BTC_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$592.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j87-Fx-BtS">
+                                <rect key="frame" x="16" y="8" width="131" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.12941176470588234" green="0.28627450980392155" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1.23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-dI-bt2">
+                                <rect key="frame" x="215" y="8" width="89" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.12941176470588234" green="0.28627450980392155" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-d6-uC2">
+                                <rect key="frame" x="16" y="59" width="288" height="51"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IQp-z1-AJ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="51"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h04-yL-TOp">
+                                            <rect key="frame" x="144" y="15" width="0.0" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="h04-yL-TOp" firstAttribute="top" secondItem="IQp-z1-AJ8" secondAttribute="top" constant="15" id="KcX-Zi-sFd"/>
+                                        <constraint firstItem="h04-yL-TOp" firstAttribute="centerX" secondItem="IQp-z1-AJ8" secondAttribute="centerX" id="Owa-cO-ivi"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-f7-A2S">
+                                <rect key="frame" x="16" y="59" width="288" height="51"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d4M-J3-6ef">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="51"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xV0-02-iXg" customClass="JBLineChartView">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="51"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xV0-02-iXg" secondAttribute="bottom" id="8b5-lN-Npc"/>
+                                        <constraint firstAttribute="trailing" secondItem="xV0-02-iXg" secondAttribute="trailing" id="KQH-OD-upt"/>
+                                        <constraint firstItem="xV0-02-iXg" firstAttribute="leading" secondItem="d4M-J3-6ef" secondAttribute="leading" id="UPO-ng-D9g"/>
+                                        <constraint firstItem="xV0-02-iXg" firstAttribute="top" secondItem="d4M-J3-6ef" secondAttribute="top" id="gen-J7-4Cj"/>
+                                    </constraints>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yja-dI-bt2" secondAttribute="trailing" id="1bh-YY-YfQ"/>
+                            <constraint firstItem="j87-Fx-BtS" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="8hA-0c-1lP"/>
+                            <constraint firstItem="xAc-f7-A2S" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="IAP-5E-csd"/>
+                            <constraint firstItem="sPy-d6-uC2" firstAttribute="trailing" secondItem="xAc-f7-A2S" secondAttribute="trailing" id="IQh-JK-eRQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xAc-f7-A2S" secondAttribute="trailing" id="LUg-nU-PLH"/>
+                            <constraint firstItem="sPy-d6-uC2" firstAttribute="leading" secondItem="xAc-f7-A2S" secondAttribute="leading" id="Oly-C7-GZS"/>
+                            <constraint firstItem="Yja-dI-bt2" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="RbP-df-8FB"/>
+                            <constraint firstItem="sPy-d6-uC2" firstAttribute="bottom" secondItem="xAc-f7-A2S" secondAttribute="bottom" id="TH4-Jx-Ysh"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="xAc-f7-A2S" secondAttribute="bottom" id="YVZ-w2-ata"/>
+                            <constraint firstItem="xAc-f7-A2S" firstAttribute="top" secondItem="j87-Fx-BtS" secondAttribute="bottom" constant="8" id="ZES-te-Jb0"/>
+                            <constraint firstItem="j87-Fx-BtS" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="b9w-7O-BDG"/>
+                            <constraint firstItem="sPy-d6-uC2" firstAttribute="top" secondItem="xAc-f7-A2S" secondAttribute="top" id="pxD-qi-x1H"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="110"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="xV0-02-iXg" id="LT0-tF-Cog"/>
+                        <outlet property="priceChangeLabel" destination="Yja-dI-bt2" id="h11-mP-JxH"/>
+                        <outlet property="priceLabel" destination="j87-Fx-BtS" id="Mmb-3Z-Mgs"/>
+                        <outlet property="priceOnDayLabel" destination="h04-yL-TOp" id="mDC-ku-Ljh"/>
+                        <outlet property="priceSelectionVibrancyView" destination="sPy-d6-uC2" id="fdj-Ij-sYD"/>
+                        <outlet property="vibrancyView" destination="xAc-f7-A2S" id="ym0-GC-hXf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27.199999999999999" y="138.53073463268368"/>
+        </scene>
+    </scenes>
+</document>
